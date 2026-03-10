@@ -8,7 +8,7 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="bg-[hsl(20,12%,8%)] text-primary-foreground/50 py-10 border-t border-golden/10 relative overflow-hidden"
+      className="bg-[#1a120a] text-amber-100/70 py-8 md:py-10 border-t border-amber-500/20 relative overflow-hidden"
     >
       <motion.div
         className="absolute inset-x-0 -top-10 h-10 bg-gradient-to-b from-golden/10 via-transparent to-transparent pointer-events-none"
@@ -16,13 +16,17 @@ const Footer = () => {
         transition={{ duration: 4, repeat: Infinity }}
       />
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
-        <motion.img
-          src={logo}
-          alt="Masta Gajali"
-          className="h-10 w-auto opacity-80"
+        <motion.div
+          className="relative inline-flex h-12 md:h-14 min-w-[150px] md:min-w-[175px] items-center justify-center rounded-full border-2 border-[#22272e] bg-[#22272e] px-4 shadow-[0_14px_40px_rgba(0,0,0,0.7)] overflow-hidden"
           whileHover={{ scale: 1.06, rotate: -2 }}
           transition={{ type: "spring", stiffness: 260, damping: 18 }}
-        />
+        >
+          <img
+            src={logo}
+            alt="Masta Gajali"
+            className="relative h-9 md:h-11 w-full object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)]"
+          />
+        </motion.div>
         <motion.p
           className="font-body text-xs text-center md:text-right"
           animate={{ opacity: [0.7, 1, 0.7] }}
